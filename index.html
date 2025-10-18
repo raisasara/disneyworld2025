@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disney World Family Trip - Nov 2-4, 2025</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: "✨";
+            position: absolute;
+            font-size: 100px;
+            opacity: 0.1;
+            top: -20px;
+            left: 20px;
+            animation: sparkle 3s infinite;
+        }
+        
+        .header::after {
+            content: "🏰";
+            position: absolute;
+            font-size: 100px;
+            opacity: 0.1;
+            bottom: -20px;
+            right: 20px;
+            animation: sparkle 3s infinite 1.5s;
+        }
+        
+        @keyframes sparkle {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.2) rotate(10deg); }
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .family-info {
+            background: #fef3c7;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 15px;
+            border-left: 5px solid #f59e0b;
+        }
+        
+        .family-info strong {
+            color: #92400e;
+        }
+        
+        .nav-tabs {
+            display: flex;
+            background: #f3f4f6;
+            padding: 0;
+            overflow-x: auto;
+            border-bottom: 3px solid #e5e7eb;
+        }
+        
+        .nav-tab {
+            flex: 1;
+            padding: 20px;
+            background: #f3f4f6;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: 600;
+            transition: all 0.3s;
+            border-bottom: 4px solid transparent;
+            min-width: 150px;
+        }
+        
+        .nav-tab:hover {
+            background: #e5e7eb;
+        }
+        
+        .nav-tab.active {
+            background: white;
+            border-bottom: 4px solid #3b82f6;
+            color: #1e40af;
+        }
+        
+        .tab-content {
+            display: none;
+            padding: 30px;
+            animation: fadeIn 0.5s;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .park-day {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            padding: 25px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            border: 3px solid #f59e0b;
+        }
+        
+        .park-day.magic-kingdom {
+            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+            border-color: #3b82f6;
+        }
+        
+        .park-day.animal-kingdom {
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+            border-color: #10b981;
+        }
+        
+        .park-day.epcot {
+            background: linear-gradient(135deg, #e9d5ff 0%, #d8b4fe 100%);
+            border-color: #a855f7;
+        }
+        
+        .park-day.hollywood {
+            background: linear-gradient(135deg, #fecaca 0%, #fca5a5 100%);
+            border-color: #ef4444;
+        }
+        
+        h2 {
+            color: #1e40af;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+        
+        h3 {
+            color: #059669;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        
+        .time-block {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 15px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .lightning-lane {
+            background: #dbeafe;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            border-left: 4px solid #3b82f6;
+        }
+        
+        .lightning-lane h4 {
+            color: #1e40af;
+            margin-bottom: 10px;
+        }
+        
+        .single-pass {
+            background: #fef3c7;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            border-left: 4px solid #f59e0b;
+        }
+        
+        .single-pass h4 {
+            color: #92400e;
+            margin-bottom: 10px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        li {
+            margin: 8px 0;
+            line-height: 1.6;
+        }
+        
+        .alert {
+            background: #fee2e2;
+            border: 2px solid #ef4444;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+        
+        .alert strong {
+            color: #991b1b;
+        }
+        
+        .tip {
+            background: #d1fae5;
+            border: 2px solid #10b981;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+        
+        .tip::before {
+            content: "💡 ";
+            font-size: 1.2em;
+        }
+        
+        .checklist {
+            background: #f3f4f6;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 15px 0;
+        }
+        
+        .checklist input[type="checkbox"] {
+            margin-right: 10px;
+            width: 18px;
+            height: 18px;
+        }
+        
+        .checklist label {
+            font-size: 1.05em;
+            cursor: pointer;
+        }
+        
+        .price-tag {
+            background: #10b981;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            font-weight: 600;
+            margin: 5px 0;
+        }
+        
+        .height-req {
+            background: #ef4444;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.9em;
+            display: inline-block;
+            margin-left: 10px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        th {
+            background: #3b82f6;
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+        
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        tr:hover {
+            background: #f9fafb;
+        }
+        
+        .emoji {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 1.8em; }
+            .nav-tab { font-size: 0.9em; padding: 15px 10px; }
+            .tab-content { padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏰 Disney World Family Adventure 🏰</h1>
+            <div class="subtitle">November 2-4, 2025</div>
+        </div>
+        
+        <div class="family-info">
+            <strong>👨‍👩‍👧‍👦 Family:</strong> 2 Adults, 10-year-old, 4.5-year-old, 1.5-year-old<br>
+            <strong>🎟️ Tickets:</strong> 3-Day Park Hopper Pass<br>
+            <strong>✈️ Departure:</strong> November 4, 7:00pm
+        </div>
+        
+        <div class="nav-tabs">
+            <button class="nav-tab active" onclick="showTab('overview')">📋 Overview</button>
+            <button class="nav-tab" onclick="showTab('day1')">Day 1 🏰</button>
+            <button class="nav-tab" onclick="showTab('day2')">Day 2 🦁</button>
+            <button class="nav-tab" onclick="showTab('day3')">Day 3 🎬</button>
+            <button class="nav-tab" onclick="showTab('tips')">💡 Tips</button>
+            <button class="nav-tab" onclick="showTab('lightning')">⚡ Lightning Lane</button>
+            <button class="nav-tab" onclick="showTab('checklist')">✅ Checklist</button>
+        </div>
+        
+        <!-- OVERVIEW TAB -->
+        <div id="overview" class="tab-content active">
+            <h2>🗓️ Trip Overview</h2>
+            
+            <div class="park-day magic-kingdom">
+                <h3>📅 Saturday, November 2: Magic Kingdom</h3>
+                <p><strong>Park Hours:</strong> 9:00am - 10:00pm</p>
+                <p><strong>Fireworks:</strong> Happily Ever After at 9:00pm</p>
+                <p><strong>Strategy:</strong> Classic Disney magic, rope drop for popular rides</p>
+            </div>
+            
+            <div class="park-day animal-kingdom">
+                <h3>📅 Sunday, November 3: Animal Kingdom + EPCOT</h3>
+                <p><strong>Animal Kingdom:</strong> 9:00am - 9:00pm</p>
+                <p><strong>EPCOT:</strong> 9:00am - 9:00pm</p>
+                <p><strong>Special Event:</strong> EPCOT Food & Wine Festival! 🍷🍴</p>
+                <p><strong>Fireworks:</strong> Luminous at EPCOT 9:00pm</p>
+            </div>
+            
+            <div class="park-day hollywood">
+                <h3>📅 Monday, November 4: Hollywood Studios (Departure Day)</h3>
+                <p><strong>Park Hours:</strong> 9:00am - 9:00pm</p>
+                <p><strong>Leave by:</strong> 4:00pm for 7:00pm flight</p>
+                <p><strong>Show:</strong> Fantasmic! at 9:30pm (won't be able to see)</p>
+            </div>
+            
+            <div class="alert">
+                <strong>⚠️ Important:</strong> You're NOT staying at a Disney Resort, so you cannot use Early Entry (8:30am). Arrive by 8:15am for 9:00am rope drop at all parks!
+            </div>
+            
+            <h3>💰 Budget Estimate</h3>
+            <table>
+                <tr>
+                    <th>Item</th>
+                    <th>Cost Per Person</th>
+                    <th>Total (5 people)</th>
+                </tr>
+                <tr>
+                    <td>Lightning Lane Multi Pass (3 days)</td>
+                    <td>~$25/day × 3 days</td>
+                    <td><span class="price-tag">~$375</span></td>
+                </tr>
+                <tr>
+                    <td>Lightning Lane Single Pass (optional)</td>
+                    <td>$10-25 per ride</td>
+                    <td><span class="price-tag">$185-308</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Total Lightning Lane Cost</strong></td>
+                    <td></td>
+                    <td><span class="price-tag">$375-683</span></td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- DAY 1 TAB -->
+        <div id="day1" class="tab-content">
+            <div class="park-day magic-kingdom">
+                <h2><span class="emoji">🏰</span>Day 1: Magic Kingdom</h2>
+                <p><strong>Saturday, November 2, 2025</strong></p>
+                <p><strong>Hours:</strong> 9:00am - 10:00pm | <strong>Arrive by:</strong> 8:15am</p>
+            </div>
+            
+            <div class="lightning-lane">
+                <h4>⚡ Lightning Lane Multi Pass Strategy</h4>
+                <p><strong>Book at 7:00am on Oct 30 (3 days prior):</strong></p>
+                <ol>
+                    <li><strong>Tier 1:</strong> Jungle Cruise (earliest time - rope drop)</li>
+                    <li><strong>Tier 2:</strong> Haunted Mansion (mid-morning)</li>
+                    <li><strong>Tier 2:</strong> Pirates of the Caribbean (late morning)</li>
+                </ol>
+            </div>
+            
+            <div class="single-pass">
+                <h4>💵 Lightning Lane Single Pass (Optional)</h4>
+                <ul>
+                    <li><strong>TRON Lightcycle / Power Run</strong> <span class="price-tag">~$20/person</span> <span class="height-req">48"</span> - 10-year-old only</li>
+                    <li><strong>Seven Dwarfs Mine Train</strong> <span class="price-tag">~$10-19/person</span> <span class="height-req">38"</span> - OR rope drop this first!</li>
+                </ul>
+            </div>
+            
+            <div class="time-block">
+                <h3>🌅 Morning (Rope Drop - 12pm)</h3>
+                <div class="tip"><strong>Rope Drop Strategy:</strong> Arrive by 8:15am, through security by 8:30am, at gates by 8:45am. At 9:00am rope drop, RUN to Seven Dwarfs Mine Train if you didn't buy Single Pass!</div>
+                <ul>
+                    <li>🎢 Seven Dwarfs Mine Train (rope drop OR Single Pass)</li>
+                    <li>⚡ Use Jungle Cruise Lightning Lane</li>
+                    <li>⚡ Use Haunted Mansion Lightning Lane</li>
+                    <li>⚡ Use Pirates Lightning Lane</li>
+                    <li>🚀 Space Mountain (standby or 4th Lightning Lane)</li>
+                    <li>🚀 TRON (if you bought Single Pass - 48" only)</li>
+                    <li>🌍 "it's a small world" (little ones love this!)</li>
+                </ul>
+            </div>
+            
+            <div class="time-block">
+                <h3>🍔 Afternoon (12pm - 3pm)</h3>
+                <ul>
+                    <li><strong>Lunch:</strong> Columbia Harbour House or Cosmic Ray's Starlight Café</li>
+                    <li>🏨 <strong>Return to hotel for naps</strong> (CRITICAL with little ones!)</li>
+                    <li>Little ones rest, 10-year-old can swim at resort pool</li>
+                </ul>
+            </div>
+            
+            <div class="time-block">
+                <h3>🌙 Evening (4pm - Close)</h3>
+                <p><strong>Return refreshed!</strong></p>
+                <ul>
+                    <li>🏴‍☠️ Pirates of the Caribbean (if didn't use LL earlier)</li>
+                    <li>🐘 Dumbo the Flying Elephant (perfect for 4.5-year-old)</li>
+                    <li>🎠 Prince Charming Regal Carrousel</li>
+                    <li>☕ Mad Tea Party</li>
+                    <li>👻 Haunted Mansion (if didn't use LL earlier)</li>
+                </ul>
+                <div class="alert">
+                    <strong>🎆 Fireworks:</strong> Happily Ever After at 9:00pm - stake out spot on Main Street by 8:15pm!
+                </div>
+                <p><strong>Park closes at 10:00pm</strong> - time for last-minute shopping!</p>
+            </div>
+        </div>
+        
+        <!-- DAY 2 TAB -->
+        <div id="day2" class="tab-content">
+            <div class="park-day animal-kingdom">
+                <h2><span class="emoji">🦁</span>Day 2: Animal Kingdom + EPCOT</h2>
+                <p><strong>Sunday, November 3, 2025</strong></p>
+            </div>
+            
+            <h3 style="color: #059669;">🌴 Morning: Animal Kingdom (9am - 2pm)</h3>
+            
+            <div class="lightning-lane">
+                <h4>⚡ Lightning Lane Multi Pass Strategy</h4>
+                <p><strong>Book at 7:00am on Oct 31 (3 days prior):</strong></p>
+                <ol>
+                    <li>Na'vi River Journey (earliest time)</li>
+                    <li>Kilimanjaro Safaris (mid-morning)</li>
+                    <li>Expedition Everest (late morning) <span class="height-req">44"</span></li>
+                </ol>
+                <p><strong>Note:</strong> Animal Kingdom has NO tiers!</p>
+            </div>
+            
+            <div class="single-pass">
+                <h4>💵 Lightning Lane Single Pass (Priority!)</h4>
+                <ul>
+                    <li><strong>Avatar Flight of Passage</strong> <span class="price-tag">~$11-18/person</span> <span class="height-req">44"</span> - THE must-do! (Adults + 10-year-old only)</li>
+                </ul>
+            </div>
+            
+            <div class="time-block">
+                <h3>🌅 Morning at Animal Kingdom</h3>
+                <div class="tip"><strong>Arrive by 8:15am!</strong> Head straight to Pandora at 9am rope drop!</div>
+                <ul>
+                    <li>🦋 Avatar Flight of Passage (Single Pass - INCREDIBLE!)</li>
+                    <li>⚡ Na'vi River Journey Lightning Lane (whole family)</li>
+                    <li>⚡ Kilimanjaro Safaris Lightning Lane (animals most active AM)</li>
+                    <li>⚡ Expedition Everest Lightning Lane (thrill ride!)</li>
+                    <li>🦍 Gorilla Falls Exploration Trail (walking)</li>
+                    <li>🦕 TriceraTop Spin (DinoLand - perfect for 4.5-year-old)</li>
+                    <li>⛏️ The Boneyard playground (let kids burn energy)</li>
+                    <li><strong>Lunch:</strong> Flame Tree Barbecue or Satu'li Canteen</li>
+                </ul>
+                <p><strong>Leave Animal Kingdom around 1:30pm, arrive EPCOT around 2pm</strong></p>
+            </div>
+            
+            <h3 style="color: #a855f7; margin-top: 30px;">🌎 Afternoon/Evening: EPCOT (2pm - 9pm)</h3>
+            
+            <div class="alert">
+                <strong>🍷 BONUS:</strong> EPCOT International Food & Wine Festival is happening! Try food samples from around the world!
+            </div>
+            
+            <div class="lightning-lane">
+                <h4>⚡ Lightning Lane Multi Pass Strategy</h4>
+                <p><strong>Book at 7:00am on Oct 31:</strong></p>
+                <ol>
+                    <li><strong>Tier 1:</strong> Remy's Ratatouille Adventure (afternoon)</li>
+                    <li><strong>Tier 2:</strong> Frozen Ever After (mid-afternoon)</li>
+                    <li><strong>Tier 2:</strong> Soarin' Around the World (late afternoon)</li>
+                </ol>
+            </div>
+            
+            <div class="single-pass">
+                <h4>💵 Lightning Lane Single Pass (Optional)</h4>
+                <ul>
+                    <li><strong>Guardians of the Galaxy: Cosmic Rewind</strong> <span class="price-tag">~$14-18/person</span> <span class="height-req">42"</span> - Must-do for 10-year-old!</li>
+                </ul>
+            </div>
+            
+            <div class="time-block">
+                <h3>🎢 Afternoon at EPCOT (2pm - 6pm)</h3>
+                <ul>
+                    <li>⚡ Frozen Ever After Lightning Lane</li>
+                    <li>⚡ Soarin' Lightning Lane</li>
+                    <li>🐠 The Seas with Nemo & Friends (aquarium)</li>
+                    <li>🎨 Journey Into Imagination with Figment</li>
+                    <li>🚀 Guardians of the Galaxy (if you bought Single Pass)</li>
+                    <li>⚡ Remy's Ratatouille Adventure Lightning Lane</li>
+                </ul>
+            </div>
+            
+            <div class="time-block">
+                <h3>🌍 Evening at EPCOT (6pm - 9pm)</h3>
+                <ul>
+                    <li>🌎 Walk around World Showcase</li>
+                    <li>🍴 <strong>Food & Wine Festival:</strong> Try international food kiosks ($5-12 per small plate)</li>
+                    <li>🍽️ <strong>Dinner:</strong> Mexico (La Hacienda), Norway (Akershus), or graze at Food & Wine</li>
+                    <li>🌐 Spaceship Earth (classic dark ride)</li>
+                </ul>
+                <div class="alert">
+                    <strong>🎆 Fireworks:</strong> Luminous The Symphony of Us at 9:00pm - watch from World Showcase Lagoon!
+                </div>
+            </div>
+        </div>
+        
+        <!-- DAY 3 TAB -->
+        <div id="day3" class="tab-content">
+            <div class="park-day hollywood">
+                <h2><span class="emoji">🎬</span>Day 3: Hollywood Studios</h2>
+                <p><strong>Monday, November 4, 2025 (Departure Day)</strong></p>
+                <p><strong>Hours:</strong> 9:00am - 9:00pm | <strong>Leave by:</strong> 4:00pm for 7pm flight</p>
+            </div>
+            
+            <div class="lightning-lane">
+                <h4>⚡ Lightning Lane Multi Pass Strategy</h4>
+                <p><strong>Book at 7:00am on Nov 1 (3 days prior):</strong></p>
+                <ol>
+                    <li><strong>Tier 1:</strong> Slinky Dog Dash (earliest time - rope drop!)</li>
+                    <li><strong>Tier 2:</strong> Toy Story Mania! (mid-morning)</li>
+                    <li><strong>Tier 2:</strong> Mickey & Minnie's Runaway Railway (late morning)</li>
+                </ol>
+            </div>
+            
+            <div class="single-pass">
+                <h4>💵 Lightning Lane Single Pass (HIGHLY RECOMMENDED!)</h4>
+                <ul>
+                    <li><strong>Star Wars: Rise of the Resistance</strong> <span class="price-tag">~$15-25/person</span> <span class="height-req">40"</span> - MUST-DO incredible experience!</li>
+                </ul>
+            </div>
+            
+            <div class="time-block">
+                <h3>🌅 Morning (Rope Drop - 12pm)</h3>
+                <div class="tip"><strong>Critical!</strong> Arrive by 8:15am. At 9am rope drop, RUN to Toy Story Land!</div>
+                <ul>
+                    <li>⚡ Slinky Dog Dash Lightning Lane (whole family loves this!)</li>
+                    <li>👽 Alien Swirling Saucers (quick Toy Story Land ride)</li>
+                    <li>⚡ Toy Story Mania! Lightning Lane (interactive shooting game)</li>
+                    <li>⚡ Mickey & Minnie's Runaway Railway Lightning Lane (trackless magic)</li>
+                    <li>🌟 Star Wars: Rise of the Resistance (Single Pass - INCREDIBLE!)</li>
+                    <li>🎭 Disney Junior Play & Dance (if 4.5-year-old likes Disney Jr)</li>
+                    <li>🐸 Muppet*Vision 3D (air conditioning break!)</li>
+                </ul>
+            </div>
+            
+            <div class="time-block">
+                <h3>🍕 Late Morning & Lunch (11am - 1pm)</h3>
+                <ul>
+                    <li>❄️ For the First Time in Forever: Frozen Sing-Along</li>
+                    <li><strong>Lunch:</strong> ABC Commissary or Woody's Lunch Box (Toy Story Land)</li>
+                </ul>
+            </div>
+            
+            <div class="time-block">
+                <h3>🎢 Afternoon (1pm - 4pm)</h3>
+                <ul>
+                    <li>🏨 Tower of Terror (book as 4th LL) <span class="height-req">40"</span></li>
+                    <li>⭐ Star Tours (whole family - Star Wars simulator)</li>
+                    <li>🎸 Rock 'n' Roller Coaster (if 10-year-old is 48" tall)</li>
+                    <li>🎬 Indiana Jones Epic Stunt Spectacular (live show)</li>
+                    <li>🛍️ Souvenir shopping on Hollywood Boulevard</li>
+                    <li>📸 Last photo ops!</li>
+                </ul>
+            </div>
+            
+            <div class="alert">
+                <strong>✈️ Departure Timeline for 7pm Flight:</strong><br>
+                • Leave park by 4:00pm<br>
+                • Return rental car: 30 min<br>
+                • Drive to airport: 30-40 min<br>
+                • Arrive at airport by 5:30pm (90 min before flight)<br>
+                • Flight: 7:00pm ✈️
+            </div>
+        </div>
+        
+        <!-- TIPS TAB -->
+        <div id="tips" class="tab-content">
+            <h2>💡 Essential Tips for Your Family</h2>
+            
+            <div class="time-block">
+                <h3>👶 For the 1.5-Year-Old</h3>
+                <ul>
+                    <li>🚼 Bring or rent a stroller ($15/day at Disney)</li>
+                    <li>🍼 Baby Care Centers in every park for feeding/changing</li>
+                    <li>👶 Lap-sitting allowed: Small World, Pirates, Haunted Mansion, Na'vi River Journey, Spaceship Earth</li>
+                    <li>🍪 Pack familiar snacks to prevent crankiness</li>
+                </ul>
+            </div>
+            
+            <div class="time-block">
+                <h3>🧒 For the 4.5-Year-Old</h3>
+                <ul>
+                    <li>📏 <strong>Height:</strong> Most family rides require 35-38" (measure before trip!)</li>
+                    <li>🎠 <strong>Perfect rides:</strong> Dumbo, Carousel, TriceraTop Spin, Alien Swirling Saucers</li>
+                    <li>🍽️ <strong>Character dining highly recommended:</strong> Chef Mickey's, Tusker House, Hollywood & Vine</li>
+                    <li>✍️ Bring autograph book for character meet & greets</li>
+                </ul>
+            </div>
+            
+            <div class="time-block">
+                <h3>🎢 For the 10-Year-Old</h3>
+                <ul>
+                    <li><strong>Available thrill rides:</strong></li>
+                    <li>• TRON (48")</li>
+                    <li>• Space Mountain (44")</li>
+                    <li>• Avatar Flight of Passage (44")</li>
+                    <li>• Expedition Everest (44")</li>
+                    <li>• Guardians of the Galaxy (42")</li>
+                    <li>• Tower of Terror (40")</li>
+                    <li>• Rise of the Resistance (40")</li>
+                    <li>• Rock 'n' Roller Coaster (48")</li>
+                    <li>🎮 <strong>Use Rider Swap</strong> so both parents can ride thrill rides!</li>
+                    <li>⭐ Star Wars and Marvel content will be highlights</li>
+                </ul>
+            </div>
+            
+            <div class="time-block">
+                <h3>🔄 What is Rider Swap?</h3>
+                <div class="tip">
+                    <strong>Rider Swap is FREE and a game-changer for families!</strong><br><br>
+                    <strong>How it works:</strong><br>
+                    1. Whole family goes to ride entrance together<br>
+                    2. Tell Cast Member you want Rider Swap<br>
+                    3. Group A (e.g., Dad + 10-year-old) rides while Group B (Mom + little ones) waits<br>
+                    4. When Group A finishes, Group B (Mom + 10-year-old) rides with NO WAIT!<br>
+                    5. Your 10-year-old gets to ride TWICE! 🎉<br><br>
+                    <strong>Works with Lightning Lane!</strong> If you have LL, Group A uses it, Group B still skips the line!
+                </div>
+            </div>
+            
+            <div class="time-block">
+                <h3>👨‍👩‍👧‍👦 General Family Tips</h3>
+                <ul>
+                    <li>📱 Download My Disney Experience App - ESSENTIAL for Lightning Lanes</li>
+                    <li>🔋 Bring portable phone chargers - you'll use the app constantly</li>
+                    <li>🍎 Pack your own snacks and refillable water bottles (saves $$)</li>
+                    <li>😴 <strong>Afternoon break is NON-NEGOTIABLE</strong> with young kids</li>
+                    <li>🌤️ Weather: Early November usually 70s-80s, light jacket for evening</li>
+                    <li>📸 Take family photos EARLY - everyone looks better before midday exhaustion!</li>
+                </ul>
+            </div>
+            
+            <div class="time-block">
+                <h3>💰 Money-Saving Tips</h3>
+                <ul>
+                    <li>🍪 Bring your own snacks - granola bars, goldfish, fruit pouches</li>
+                    <li>💧 Water is FREE - ask any quick service restaurant for ice water</li>
+                    <li>🍔 Share meals - Disney portions are HUGE</li>
+                    <li>🍽️ Skip table service for this short trip - quick service is faster with little ones</li>
+                    <li>🌧️ Bring ponchos from dollar store - Disney charges $12+ for rain ponchos</li>
+                </ul>
+            </div>
+            
+            <div class="time-block">
+                <h3>📏 Height Requirements Quick Reference</h3>
+                <table>
+                    <tr>
+                        <th>Height</th>
+                        <th>Rides</th>
+                    </tr>
+                    <tr>
+                        <td><strong>No Height Requirement</strong></td>
+                        <td>Most dark rides, shows: Pirates, Haunted Mansion, Small World, Frozen, etc.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>35"</strong></td>
+                        <td>Star Tours</td>
+                    </tr>
+                    <tr>
+                        <td><strong>38"</strong></td>
+                        <td>Seven Dwarfs Mine Train, Soarin'</td>
+                    </tr>
+                    <tr>
+                        <td><strong>40"</strong></td>
+                        <td>Big Thunder Mountain, Tower of Terror, Rise of the Resistance</td>
+                    </tr>
+                    <tr>
+                        <td><strong>42"</strong></td>
+                        <td>Slinky Dog Dash, Test Track, Guardians of the Galaxy</td>
+                    </tr>
+                    <tr>
+                        <td><strong>44"</strong></td>
+                        <td>Space Mountain, Expedition Everest, Avatar Flight of Passage</td>
+                    </tr>
+                    <tr>
+                        <td><strong>48"</strong></td>
+                        <td>TRON Lightcycle, Rock 'n' Roller Coaster</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <!-- LIGHTNING LANE TAB -->
+        <div id="lightning" class="tab-content">
+            <h2>⚡ Lightning Lane Guide</h2>
+            
+            <div class="time-block">
+                <h3>🎯 What You Need to Know</h3>
+                <ul>
+                    <li><strong>Cost:</strong> $20-40 per person per day (varies by park and date)</li>
+                    <li><strong>Booking Window:</strong> 3 days in advance (you're not staying at Disney Resort)</li>
+                    <li><strong>Pre-Selections:</strong> Choose 3 attractions per park with specific return times</li>
+                    <li><strong>Book at:</strong> 7:00am Eastern Time, exactly 3 days before each park day</li>
+                    <li><strong>Bonus:</strong> Includes unlimited digital downloads of ride photos!</li>
+                </ul>
+            </div>
+            
+            <div class="time-block">
+                <h3>🎭 Tier System Explained</h3>
+                <div class="tip">
+                    Magic Kingdom, EPCOT, and Hollywood Studios have 2 tiers.<br>
+                    <strong>Pre-book:</strong> ONE from Tier 1 + TWO from Tier 2 (or all three from Tier 2)<br>
+                    <strong>After first use:</strong> Tier restrictions disappear! Book any available attraction.
+                </div>
+                <p><strong>Animal Kingdom:</strong> NO tiers - choose any 3 attractions!</p>
+            </div>
+            
+            <div class="time-block">
+                <h3>💵 Lightning Lane SINGLE PASS (Sold Separately)</h3>
+                <p>These popular rides are NOT included in Multi Pass. Purchase up to 2 Single Passes per day:</p>
+                
+                <table>
+                    <tr>
+                        <th>Park</th>
+                        <th>Attraction</th>
+                        <th>Price</th>
+                        <th>Height</th>
+                    </tr>
+                    <tr>
+                        <td>Magic Kingdom</td>
+                        <td>TRON Lightcycle / Power Run</td>
+                        <td>~$20</td>
+                        <td>48"</td>
+                    </tr>
+                    <tr>
+                        <td>Magic Kingdom</td>
+                        <td>Seven Dwarfs Mine Train</td>
+                        <td>~$10-19</td>
+                        <td>38"</td>
+                    </tr>
+                    <tr>
+                        <td>EPCOT</td>
+                        <td>Guardians of the Galaxy</td>
+                        <td>~$14-18</td>
+                        <td>42"</td>
+                    </tr>
+                    <tr>
+                        <td>Hollywood Studios</td>
+                        <td>Star Wars: Rise of the Resistance</td>
+                        <td>~$15-25</td>
+                        <td>40"</td>
+                    </tr>
+                    <tr>
+                        <td>Animal Kingdom</td>
+                        <td>Avatar Flight of Passage</td>
+                        <td>~$11-18</td>
+                        <td>44"</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="time-block">
+                <h3>💰 Total Budget Estimate</h3>
+                <div class="alert">
+                    <strong>Lightning Lane Multi Pass (3 days):</strong> ~$375 total for 5 people<br>
+                    <strong>Single Pass (if buying all):</strong> ~$185-308 total<br>
+                    <strong>GRAND TOTAL:</strong> $560-683
+                </div>
+                
+                <div class="tip">
+                    <strong>Our Recommendations for Single Pass:</strong><br>
+                    • <strong>Priority 1:</strong> Seven Dwarfs Mine Train (Magic Kingdom)<br>
+                    • <strong>Priority 2:</strong> Rise of the Resistance (Hollywood Studios)<br>
+                    • <strong>Priority 3:</strong> Avatar Flight of Passage (Animal Kingdom)<br>
+                    These have the longest waits and are hardest to get!
+                </div>
+            </div>
+            
+            <div class="time-block">
+                <h3>📅 When to Book Lightning Lanes</h3>
+                <table>
+                    <tr>
+                        <th>Park Day</th>
+                        <th>Book Date</th>
+                        <th>Book Time</th>
+                    </tr>
+                    <tr>
+                        <td>Nov 2 (Magic Kingdom)</td>
+                        <td>Oct 30, 2025</td>
+                        <td>7:00am ET</td>
+                    </tr>
+                    <tr>
+                        <td>Nov 3 (Animal Kingdom + EPCOT)</td>
+                        <td>Oct 31, 2025</td>
+                        <td>7:00am ET</td>
+                    </tr>
+                    <tr>
+                        <td>Nov 4 (Hollywood Studios)</td>
+                        <td>Nov 1, 2025</td>
+                        <td>7:00am ET</td>
+                    </tr>
+                </table>
+                <div class="alert">
+                    <strong>⏰ Set alarms!</strong> Wake up at 6:50am on these dates to be ready at 7:00am sharp!
+                </div>
+            </div>
+        </div>
+        
+        <!-- CHECKLIST TAB -->
+        <div id="checklist" class="tab-content">
+            <h2>✅ Pre-Trip Checklist</h2>
+            
+            <div class="checklist">
+                <h3>📱 2-3 Months Before Trip</h3>
+                <label><input type="checkbox"> Download My Disney Experience App</label><br>
+                <label><input type="checkbox"> Link park tickets to app</label><br>
+                <label><input type="checkbox"> Make dining reservations (60 days out if desired)</label><br>
+                <label><input type="checkbox"> Book hotel/accommodations</label><br>
+                <label><input type="checkbox"> Book flights</label><br>
+                <label><input type="checkbox"> Arrange rental car or transportation</label><br>
+            </div>
+            
+            <div class="checklist">
+                <h3>📅 3 Days Before Each Park Day</h3>
+                <label><input type="checkbox"> Oct 30 at 7am: Book Lightning Lanes for Magic Kingdom (Nov 2)</label><br>
+                <label><input type="checkbox"> Oct 31 at 7am: Book Lightning Lanes for Animal Kingdom + EPCOT (Nov 3)</label><br>
+                <label><input type="checkbox"> Nov 1 at 7am: Book Lightning Lanes for Hollywood Studios (Nov 4)</label><br>
+            </div>
+            
+            <div class="checklist">
+                <h3>📋 2 Weeks Before Trip</h3>
+                <label><input type="checkbox"> Check park hours in My Disney Experience app (hours can change!)</label><br>
+                <label><input type="checkbox"> Check show times and fireworks schedules</label><br>
+                <label><input type="checkbox"> Measure kids' heights for ride requirements</label><br>
+                <label><input type="checkbox"> Check weather forecast</label><br>
+            </div>
+            
+            <div class="checklist">
+                <h3>🎒 What to Pack</h3>
+                <label><input type="checkbox"> Sunscreen (SPF 50+)</label><br>
+                <label><input type="checkbox"> Portable phone chargers (at least 2)</label><br>
+                <label><input type="checkbox"> Refillable water bottles (one per person)</label><br>
+                <label><input type="checkbox"> Snacks (granola bars, goldfish, fruit pouches)</label><br>
+                <label><input type="checkbox"> Stroller for 1.5-year-old (or plan to rent)</label><br>
+                <label><input type="checkbox"> Autograph book and pen for 4.5-year-old</label><br>
+                <label><input type="checkbox"> Rain ponchos from dollar store</label><br>
+                <label><input type="checkbox"> Band-aids and basic first aid</label><br>
+                <label><input type="checkbox"> Hand sanitizer and wipes</label><br>
+                <label><input type="checkbox"> Light jacket for evening (November can be cool)</label><br>
+                <label><input type="checkbox"> Comfortable walking shoes (break them in first!)</label><br>
+                <label><input type="checkbox"> Extra change of clothes for little ones</label><br>
+                <label><input type="checkbox"> Medications (kids' Tylenol, etc.)</label><br>
+            </div>
+            
+            <div class="checklist">
+                <h3>✈️ Day Before Trip</h3>
+                <label><input type="checkbox"> Check in for flight online</label><br>
+                <label><input type="checkbox"> Charge all devices fully</label><br>
+                <label><input type="checkbox"> Download offline maps</label><br>
+                <label><input type="checkbox"> Print boarding passes</label><br>
+                <label><input type="checkbox"> Review itinerary with family</label><br>
+            </div>
+            
+            <div class="checklist">
+                <h3>🏰 Each Park Day</h3>
+                <label><input type="checkbox"> Wake up at 6:50am to book additional Lightning Lanes at 7am</label><br>
+                <label><input type="checkbox"> Arrive at park 45-60 minutes before rope drop</label><br>
+                <label><input type="checkbox"> Apply sunscreen before leaving hotel</label><br>
+                <label><input type="checkbox"> Pack backpack with water, snacks, chargers</label><br>
+                <label><input type="checkbox"> Check app for current wait times</label><br>
+                <label><input type="checkbox"> Take family photo early in the day</label><br>
+                <label><input type="checkbox"> Download PhotoPass photos at end of day</label><br>
+            </div>
+            
+            <div class="time-block" style="background: #fef3c7; border: 3px solid #f59e0b;">
+                <h3 style="color: #92400e;">🎉 Remember:</h3>
+                <ul style="color: #92400e;">
+                    <li><strong>Be flexible!</strong> Things don't always go as planned with kids</li>
+                    <li><strong>Take breaks!</strong> Better to do less and enjoy it than rush everything</li>
+                    <li><strong>Stay hydrated!</strong> Florida heat is real, even in November</li>
+                    <li><strong>Have fun!</strong> This is about making magical memories with your family! ✨</li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+    <script>
+        function showTab(tabName) {
+            // Hide all tab contents
+            const contents = document.getElementsByClassName('tab-content');
+            for (let i = 0; i < contents.length; i++) {
+                contents[i].classList.remove('active');
+            }
+            
+            // Remove active class from all tabs
+            const tabs = document.getElementsByClassName('nav-tab');
+            for (let i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('active');
+            }
+            
+            // Show selected tab content
+            document.getElementById(tabName).classList.add('active');
+            
+            // Add active class to clicked tab
+            event.target.classList.add('active');
+            
+            // Scroll to top
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+        
+        // Save checkbox states to localStorage
+        const checkboxes = document.querySelectorAll('.checklist input[type="checkbox"]');
+        checkboxes.forEach((checkbox, index) => {
+            // Load saved state
+            const saved = localStorage.getItem(`checkbox-${index}`);
+            if (saved === 'true') {
+                checkbox.checked = true;
+            }
+            
+            // Save state on change
+            checkbox.addEventListener('change', function() {
+                localStorage.setItem(`checkbox-${index}`, this.checked);
+            });
+        });
+    </script>
+</body>
+</html>
